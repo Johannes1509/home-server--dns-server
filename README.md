@@ -1,4 +1,4 @@
-# ansible-pihole (für DNSPI)
+# ansible-pihole (für DNS-Pi)
 
 WICHTIG: Raspberry Pi OS (Legacy) Debian Bullseye mit desktop env und security updates nehmen
 
