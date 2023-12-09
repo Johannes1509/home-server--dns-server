@@ -14,19 +14,11 @@
     label: "{{ item.address }}"
   when: "'link' in item.scope"
 
-- name: Determine Pi-hole host IPs (HA mode)
-  set_fact:
-    pihole_local_ipv4: "{{ pihole_vip_ipv4.split('/')[0] }}"
-    pihole_local_ipv6: "{{ pihole_vip_ipv6.split('/')[0] }}"
-    execution_mode: "HA setup with keepalived"
-  when: pihole_ha_mode
-
 - name: Determine Pi-hole host IPs (single mode)
   set_fact:
     pihole_local_ipv4: "{{ ansible_host }}"
     pihole_local_ipv6: "{{ ipv6 }}"
     execution_mode: "single node setup"
-  when: not pihole_ha_mode
 
 - name: Start/Update pihole container
   docker_container:

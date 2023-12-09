@@ -1,14 +1,3 @@
-- name: Add ssh key
-  ansible.posix.authorized_key:
-    key: https://github.com/{{ github_user_for_ssh_key }}.keys
-    user: "{{ ansible_user }}"
-    comment: "github-{{ github_user_for_ssh_key }}"
-
-- name: Lock password for {{ ansible_user }}
-  user:
-    name: "{{ ansible_user }}"
-    password_lock: yes
-
 - name: bashrc for {{ ansible_user }}
   blockinfile:
     path: "/home/{{ ansible_user }}/.bashrc"
