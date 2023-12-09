@@ -1,0 +1,8 @@
+- name: Setting local dns entries
+  copy:
+    src: "./var/dns-entries"
+    dest: "/home/{{ ansible_user }}/pihole/pihole/custom.list"
+    remote_src: false
+  tags:
+    - set_dns_entries
+  
