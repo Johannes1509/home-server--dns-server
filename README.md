@@ -18,3 +18,6 @@ WICHTIG: Raspberry Pi OS (Legacy) Debian Bullseye mit desktop env und security u
 #### Playbook ausrollen
 - Playbook ausrollen mit `ansible-playbook -i inventory.yaml setup_pi.yml` 
 Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf dnspi schalten und host-fingerprint speichern
+
+#### Nachbereitung
+- Fritzbox konfigurieren wie [hier](https://docs.pi-hole.net/routers/fritzbox-de/#pi-hole-als-dns-server-via-dhcp-an-clients-verteilen-lan-seite) beschrieben
