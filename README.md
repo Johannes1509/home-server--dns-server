@@ -15,7 +15,7 @@ Es gibt zwei Modi, wie das Repo genutzt werden kann:
   - Hostname `dnspi` setzen (in Pi Imager Einstellungen)
 - PI booten lassen
 - Wichtig: PI ist in Fritzbox Netzwerk sichtbar (Checken)
-- Pi in Fritzbox
+- Pi in Fritzbox als 
 - Variablen in [inventory.yaml](inventory.yaml) pflegen
 - Lokale DNS-Einträge in der [var/dns-entries](var/dns-entries) pflegen
 
@@ -24,7 +24,9 @@ Es gibt zwei Modi, wie das Repo genutzt werden kann:
 Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf dnspi schalten und host-fingerprint speichern
 
 #### 1.3 Nachbereitung
-- Fritzbox konfigurieren wie [hier](https://docs.pi-hole.net/routers/fritzbox-de/#pi-hole-als-dns-server-via-dhcp-an-clients-verteilen-lan-seite) beschrieben (weitere Einstellungen sind nicht notwendig in der Fritzbox!)
+- Fritzbox konfigurieren wie [hier](https://docs.pi-hole.net/routers/fritzbox-de/#pi-hole-als-dns-server-via-dhcp-an-clients-verteilen-lan-seite) beschrieben
+- Fritzbox konfigurieren: PI-IPv6 Adresse als DNS-Server hinterlegen (unter Heimnetz > Netzwerk > Netzwerkeinstellungen > IPv6-Einstellungen (weiter unten) > DNSv6-Server im Heimnetz) 
+> weitere Einstellungen sind nicht notwendig in der Fritzbox!
 
 
 ### 2. Update DNS Entries
