@@ -62,6 +62,9 @@
     images_filters:
       dangling: false
 
+- name: Stop pihole blocking
+  command: docker exec -it pihole /bin/bash -c 'pihole disable'
+
 - name: INFORMATION
   debug:
     msg:

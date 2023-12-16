@@ -26,7 +26,7 @@ Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf 
 #### 1.3 Nachbereitung
 - Fritzbox konfigurieren wie [hier](https://docs.pi-hole.net/routers/fritzbox-de/#pi-hole-als-dns-server-via-dhcp-an-clients-verteilen-lan-seite) beschrieben
 - Fritzbox konfigurieren: PI-IPv6 Adresse als DNS-Server hinterlegen (unter Heimnetz > Netzwerk > Netzwerkeinstellungen > IPv6-Einstellungen (weiter unten) > DNSv6-Server im Heimnetz) 
-> weitere Einstellungen sind nicht notwendig in der Fritzbox!
+- Frotzbox konfigurieren: IPv4 + IPv6-Adresse des dnspis unter Internet > Zugangsdaten für DNS-Server eintragen
 
 
 ### 2. Update DNS Entries
@@ -36,4 +36,4 @@ Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf 
 
 #### 2.2 Playbook ausrollen
 - Playbook ausrollen mit `ansible-playbook -i inventory.yaml setup_pi.yml --tags "set_dns_entries"` 
-Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf dnspi schalten und host-fingerprint speichern
+Hinweis: Wenn die Meldung kommt ala "Hostkey unbekannt" einmal kurz per ssh auf dnspi schalten und host-fingerprint speichern
