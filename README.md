@@ -27,6 +27,7 @@ Hinweis: Wenn die Meldung kommt ala "Hostkey umbekannt" einmal kurz per ssh auf 
 - Fritzbox konfigurieren wie [hier](https://docs.pi-hole.net/routers/fritzbox-de/#pi-hole-als-dns-server-via-dhcp-an-clients-verteilen-lan-seite) beschrieben
 - Fritzbox konfigurieren: PI-IPv6 Adresse als DNS-Server hinterlegen (unter Heimnetz > Netzwerk > Netzwerkeinstellungen > IPv6-Einstellungen (weiter unten) > DNSv6-Server im Heimnetz) 
 - Frotzbox konfigurieren: IPv4 + IPv6-Adresse des dnspis unter Internet > Zugangsdaten für DNS-Server eintragen
+- ConfigMap von CoreDNS bearbeiten (im Fluxrepo) und dort die IP des DNS Pi unter `forward . <DNSPI-IP-ADRESSE>` eintragen
 
 
 ### 2. Update DNS Entries
