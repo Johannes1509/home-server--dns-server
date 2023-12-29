@@ -1,4 +1,5 @@
 192.168.178.95 dnspi
 192.168.178.21 homemaster
+192.168.178.50 homemaster
 192.168.178.85 dashboardpi
 192.168.178.1 fritz.box
